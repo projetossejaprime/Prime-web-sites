@@ -26,10 +26,14 @@ textarea:focus, input:focus, select:focus {
 :root{
     --primaria: rgb(131, 217, 0);
     --primaria-claro: rgb(170, 243, 61);
+    --primaria-escura: rgb(108, 171, 0);
     --secundaria: rgb(255, 255, 255);
 
     --cor-fonte: white;
+    --cor-fonte-escura: rgb(20, 20, 20);
+
     --cor-fonte-btn: white;
+    --cor-fonte-btn-escura: rgb(20, 20, 20);
 
     --invisivel: rgba(255, 119, 0, 0);
 }
@@ -47,8 +51,7 @@ body{
 }
 
 section{
-    height: auto;
-    min-height: 90vh;
+    height: 100vh;
     max-height: 860px;
 
     padding: 0 !important;
@@ -57,6 +60,8 @@ section{
 .row{
     width: 100% !important;
     max-width: 1500px !important;
+    height: 100%;
+
     margin: 0 auto !important;
 }
 
@@ -68,26 +73,36 @@ section{
 
         background-color: var(--primaria);
 
-        border: 1px var(--primaria) solid !important;
-        border-radius: 8px;
+        width: 200px;
+
+        border: none !important;
+        border-radius: 50px;
 
         box-shadow: none !important;
 
         padding: 10px 20px;
 
-        transition: .2s linear;
         cursor: pointer;
     }
     .btn-saiba-mais:hover{
         color: var(--cor-fonte-btn);
-        background-color: rgba(255, 119, 0, 0.096);
+        background-color: var(--primaria-claro);
 
         box-shadow: none;
+    }
+    .reverse-btn{
+        color: var(--primaria) !important;
+
+        background-color: var(--cor-fonte) !important;
+    }
+    .reverse-btn:hover{      
+        background-color: rgb(216, 216, 216) !important;
     }
 
 /* Seção 1 */
 
 .section-1{
+    height: auto !important;
     max-height: unset !important;
 }
 
@@ -137,6 +152,11 @@ section{
     }
 
 /* Seção 2 */
+
+.section-2{
+    height: auto !important;
+    max-height: unset !important;
+}
 
 .section-2 .cards-s2{
     display: flex;
@@ -202,6 +222,7 @@ section{
 /* Seção 3 */
 
 .section-3{
+    height: auto !important;
     max-height: unset !important;
 }
 
@@ -253,66 +274,1667 @@ section{
 
 /* Seção 4 */
 
+.section-4{
+    height: 100vh;
+    max-height: 860px;
+}
 
+.section-4 .texto-s4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
+
+    padding-left: 60px;
+}
+
+    .texto-s4 > h2{
+        color: var(--cor-fonte-escura);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s4 > p{
+        color: var(--cor-fonte-escura);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-4 .imagem-s4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+    .imagem-s4 > img{
+        width: 90%;
+        min-width: 320px;
+        max-width: 600px;
+
+        height: auto;
+    }
 
 /* Seção 5 */
 
+.section-5{
+    height: 100vh;
+    max-height: 860px;
+}
 
+.section-5 > .row{
+    background-image: url(../images/bg-s5.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section-5 .texto-s5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
+
+    padding-right: 60px;
+}
+
+    .texto-s5 > h2{
+        color: var(--cor-fonte);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s5 > p{
+        color: var(--cor-fonte);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-5 .imagem-s5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+}
+
+    .imagem-s5 > img{
+        width: 80%;
+        min-width: 320px;
+        max-width: 600px;
+        height: auto;
+
+        margin-bottom: 20%;
+    }
 
 /* Seção 6 */
 
+.section-6{
+    height: 100vh;
+    max-height: 860px !important;
+}
 
+.section-6 .texto-s6{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
 
-/* Seção pag */
+    padding-left: 60px;
+}
 
+    .texto-s6 > h2{
+        color: var(--cor-fonte-escura);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
 
+    .texto-s6 > p{
+        color: var(--cor-fonte-escura);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-6 .imagem-s6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+}
+
+    .imagem-s6 > img{
+        width: 60%;
+        min-width: 320px;
+        max-width: 600px;
+
+        height: auto;
+    }
 
 /* Seção 7 */
 
+.section-7{
+    height: 100vh;
+    max-height: 860px !important;
+}
 
+.section-7 .texto-s7{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
+
+    padding-right: 60px;
+}
+
+    .texto-s7 > h2{
+        color: var(--cor-fonte-escura);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s7 > p{
+        color: var(--cor-fonte-escura);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-7 .imagem-s7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+
+    position: relative;
+}
+
+    .imagem-s7 > img{
+        width: 850px;
+        min-width: 320px;
+
+        height: auto;
+
+        position: absolute;
+        left: -180px;
+    }
 
 /* Seção 8 */
 
+.section-8{
+    height: 100vh;
+    max-height: 860px;
+}
 
+.section-8 > .row{
+    background-image: url(../images/bg-s8.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section-8 .texto-s8{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
+
+    padding-left: 60px;
+}
+
+    .texto-s8 > h2{
+        color: var(--cor-fonte);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s8 > p{
+        color: var(--cor-fonte);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-8 .imagem-s8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+    .imagem-s8 > img{
+        width: 100%;
+        min-width: 320px;
+        height: auto;
+
+        position: absolute;
+        right: -150px;
+    }
 
 /* Seção 9 */
 
+.section-9{
+    height: 100vh;
+    max-height: 860px !important;
+}
 
+.section-9 > .row{
+    background-image: url(../images/bg-s9.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section-9 .texto-s9{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
+
+    padding-right: 60px;
+}
+
+    .texto-s9 > h2{
+        color: var(--primaria-escura);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s9 > p{
+        color: var(--cor-fonte-escura);
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-9 .imagem-s9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+    .imagem-s9 > img{
+        width: 80%;
+        min-width: 320px;
+        max-width: 600px;
+
+        height: auto;
+
+        position: absolute;
+        bottom: -180px;
+    }
 
 /* Seção 10 */
 
+.section-10{
+    height: 100vh;
+    max-height: 860px;
+}
 
+.section-10 > .row{
+    background-image: url(../images/bg-s10-11-14-15.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section-10 .texto-s10{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
+
+    padding-left: 60px;
+}
+
+    .texto-s10 > h2{
+        color: var(--cor-fonte-escura);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s10 > p{
+        color: var(--cor-fonte-escura);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-10 .imagem-s10{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+    .imagem-s10 > img{
+        width: 880px;
+        height: auto;
+
+        position: absolute;
+        top: 0;
+        right: -240px;
+    }
 
 /* Seção 11 */
 
+.section-11{
+    height: 100vh;
+    max-height: 860px;
+}
 
+.section-11 > .row{
+    background-image: url(../images/bg-s10-11-14-15.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section-11 .texto-s11{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
+
+    padding-left: 60px;
+}
+
+    .texto-s11 > h2{
+        color: var(--cor-fonte-escura);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s11 > p{
+        color: var(--cor-fonte-escura);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-11 .imagem-s11{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+    .imagem-s11 > img{
+        width: 90%;
+        height: auto;
+
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+    }
 
 /* Seção 12 */
 
+.section-12{
+    height: 100vh;
+    max-height: 860px !important;
+}
 
+.section-12 > .row{
+    background-image: url(../images/bg-s12.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section-12 .texto-s12{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
+
+    padding-right: 60px;
+}
+
+    .texto-s12 > h2{
+        color: var(--cor-fonte-escura);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s12 > p{
+        color: var(--cor-fonte-escura);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-12 .imagem-s12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+    .imagem-s12 > img{
+        width: 80%;
+        min-width: 320px;
+        max-width: 600px;
+
+        height: auto;
+    }
 
 /* Seção 13 */
 
+.section-13{
+    height: 100vh;
+    max-height: 860px;
+}
 
+.section-13 > .row{
+    background-image: url(../images/bg-s13.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section-13 .texto-s13{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
+
+    padding-left: 60px;
+}
+
+    .texto-s13 > h2{
+        color: var(--cor-fonte);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s13 > p{
+        color: var(--cor-fonte);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+    .texto-s13 > .btn-saiba-mais{
+        color: var(--cor-fonte-btn-escura);
+        background-color: var(--cor-fonte-btn);
+    }
+    .texto-s13 > .btn-saiba-mais:hover{
+        color: var(--cor-fonte);
+        background-color: var(--primaria);
+    }
+
+.section-13 .imagem-s13{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+    .imagem-s13 > img{
+        width: 90%;
+        height: auto;
+
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+    }
 
 /* Seção 14 */
 
+.section-14{
+    height: 100vh;
+    max-height: 860px;
+}
 
+.section-14 > .row{
+    background-image: url(../images/bg-s10-11-14-15.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section-14 .texto-s14{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
+
+    padding-right: 60px;
+}
+
+    .texto-s14 > h2{
+        color: var(--cor-fonte-escura);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s14 > p{
+        color: var(--cor-fonte-escura);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-14 .imagem-s14{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+    .imagem-s14 > img{
+        width: 50%;
+        height: auto;
+    }
 
 /* Seção 15 */
 
+.section-15{
+    height: 100vh;
+    max-height: 860px;
+}
 
+.section-15 > .row{
+    background-image: url(../images/bg-s10-11-14-15.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
-/* Seção 16 */
+.section-15 .texto-s15{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
 
+    padding-left: 60px;
+}
 
+    .texto-s15 > h2{
+        color: var(--cor-fonte-escura);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s15 > p{
+        color: var(--cor-fonte-escura);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-15 .imagem-s15{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+    .imagem-s15 > img{
+        width: 90%;
+        height: auto;
+    }
+
+/* ========= Seção 16 ========= */
+
+.section-16{
+    height: 100vh;
+    max-height: 860px;
+}
+
+.section-16 > .row{
+    background-image: url(../images/bg-s16.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section-16 .texto-s16{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100%;
+
+    padding-right: 60px;
+}
+
+    .texto-s16 > h2{
+        color: var(--cor-fonte);
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .texto-s16 > p{
+        color: var(--cor-fonte);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+.section-16 .form-s16{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+    .form-s16 > .form-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: white;
+
+        width: 70%;
+        
+        border-radius: 12px;
+    }
+
+        .form-box > .form-title{
+            color: var(--cor-fonte);
+            text-align: center;
+            text-transform: uppercase;
+            background-color: black;
+
+            width: 100%;
+
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+
+            padding: 20px;
+        }
+
+            .form-title > h3{
+                font-size: 1.4rem;
+            }
+
+        .form-box > form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+
+            padding: 30px 0;
+        }
+
+        .form-box form > input{
+            background-color: rgb(245, 245, 245);
+
+            width: 80%;
+
+            border: 2px solid rgb(245, 245, 245);
+            border-radius: 8px;
+
+            margin: 5px 0;
+            padding: 15px 30px;
+
+            transition: .1s;
+        }
+
+        .form-box form > input:focus{
+            border: 2px solid rgb(136, 136, 136);
+        }
+
+        .form-box form > button{
+            color: var(--cor-fonte-btn);
+            text-transform: uppercase;
+
+            background-color: var(--cor-fonte-btn-escura);
+
+            width: 80%;
+
+            border: 1px solid black;
+            border-radius: 8px;
+
+            margin: 5px 0;
+            padding: 15px 30px;
+
+            cursor: pointer;
+            
+            transition: .3s ease-out;
+        }
+
+        .form-box form > button:hover{
+            color: var(--cor-fonte-escura);
+            background-color: var(--invisivel);
+        }
 
 /* Smartphones */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    h1, h2{
+        font-size: 2rem !important;
+    }
+
+    p{
+        font-size: 1rem !important;
+    }
+
+    /* ========= Seção 1 Smartphones ========= */
+
+    .section-1{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-1 .texto-s1{
+        margin: 30px 0;
+    }
+
+        .texto-s1 > h1{
+            width: 100%;
+
+            margin: 0 auto;
+        }
+
+        .texto-s1 > p{
+            width: 100%;
+
+            margin: 25px auto 0;
+        }
+
+    /* .section-1 .imagem-s1{
+    }
+
+    .imagem-s1 > img{
+    } */
+
+    /* ========= Seção 2 Smartphones ========= */
+
+    .section-2{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    /* ========= Seção 3 Smartphones ========= */
+
+    .section-3{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-3 > .row{
+        background-size: 450%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .section-3 .texto-s3{
+        margin: 160px 0;
+    }
+
+        .texto-s3 > h2{
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+
+            width: 100%;
+
+            margin: 0 auto;
+        }
+
+        .texto-s3 > p{
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-align: center;
+
+            width: 90%;
+
+            margin: 20px auto 0;
+        }
+
+    /* .section-3 .imagem-s3{
+    }
+
+        .imagem-s3 > img{
+        } */
+
+    /* ========= Seção 4 Smartphones ========= */
+
+    .section-4{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-4 .texto-s4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-left: 15px;
+    }
+
+        .texto-s4 > h2{
+            text-align: center;
+        }
+
+        .texto-s4 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-4 .imagem-s4{
+        height: auto;
+    }
+
+        .imagem-s4 > img{
+            width: 90%;
+            min-width: 320px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0;
+        }
+
+    /* ========= Seção 5 Smartphones ========= */
+
+    .section-5{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-5 .texto-s5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-right: 15px;
+    }
+
+        .texto-s5 > h2{
+            text-align: center;
+        }
+
+        .texto-s5 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-5 .imagem-s5{
+        height: auto;
+    }
+
+        .imagem-s5 > img{
+            width: 90%;
+            min-width: 320px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0;
+        }
+
+    /* ========= Seção 6 Smartphones ========= */
+
+    .section-6{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-6 .texto-s6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-left: 15px;
+    }
+
+        .texto-s6 > h2{
+            text-align: center;
+        }
+
+        .texto-s6 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-6 .imagem-s6{
+        height: auto;
+    }
+
+        .imagem-s6 > img{
+            width: 90%;
+            min-width: 320px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0;
+        }
+
+    /* ========= Seção 7 Smartphones ========= */
+
+    .section-7{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-7 .texto-s7{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-right: 15px;
+    }
+
+        .texto-s7 > h2{
+            text-align: center;
+        }
+
+        .texto-s7 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-7 .imagem-s7{
+        height: auto;
+    }
+
+        .imagem-s7 > img{
+            width: 100%;
+            min-width: 320px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0;
+
+            position: relative !important;
+            left: unset !important;
+        }
+
+    /* ========= Seção 8 Smartphones ========= */
+
+    .section-8{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-8 .texto-s8{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-left: 15px;
+    }
+
+        .texto-s8 > h2{
+            text-align: center;
+        }
+
+        .texto-s8 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-8 .imagem-s8{
+        height: auto;
+    }
+
+        .imagem-s8 > img{
+            width: 100%;
+            min-width: 320px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0;
+
+            position: relative !important;
+            right: -90px !important;
+        }
+
+    /* ========= Seção 9 Smartphones ========= */
+
+    .section-9{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-9 .texto-s9{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-right: 15px;
+    }
+
+        .texto-s9 > h2{
+            text-align: center;
+        }
+
+        .texto-s9 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-9 .imagem-s9{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+    
+        margin: 60px 0;
+
+        position: relative;
+    
+        overflow: hidden;
+    }
+    
+        .imagem-s9 > img{
+            min-width: 320px;
+            max-width: 600px;
+    
+            height: auto;
+    
+            position: relative;
+            bottom: 0;
+
+            transform: rotate(-60deg);
+        }
+
+    /* ========= Seção 10 Smartphones ========= */
+
+    .section-10{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-10 .texto-s10{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-left: 15px;
+    }
+
+        .texto-s10 > h2{
+            text-align: center;
+        }
+
+        .texto-s10 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-10 .imagem-s10{
+        height: auto;
+    }
+
+        .imagem-s10 > img{
+            width: 100%;
+            min-width: 320px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0;
+
+            position: relative !important;
+            right: 0 !important;
+        }
+
+    /* ========= Seção 11 Smartphones ========= */
+
+    .section-11{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-11 .texto-s11{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-left: 15px;
+    }
+
+        .texto-s11 > h2{
+            text-align: center;
+        }
+
+        .texto-s11 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-11 .imagem-s11{
+        height: auto;
+    }
+
+        .imagem-s11 > img{
+            width: 100%;
+            min-width: 320px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0 0 0;
+
+            position: relative !important;
+            right: 0 !important;
+        }
+
+    /* ========= Seção 12 Smartphones ========= */
+
+    .section-12{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-12 .texto-s12{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-right: 15px;
+    }
+
+        .texto-s12 > h2{
+            text-align: center;
+        }
+
+        .texto-s12 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-12 .imagem-s12{
+        height: auto;
+    }
+
+        .imagem-s12 > img{
+            width: 100%;
+            min-width: 320px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0;
+
+            position: relative !important;
+            left: unset !important;
+        }
+
+    /* ========= Seção 13 Smartphones ========= */
+
+    .section-13{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-13 .texto-s13{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-left: 15px;
+    }
+
+        .texto-s13 > h2{
+            text-align: center;
+        }
+
+        .texto-s13 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-13 .imagem-s13{
+        height: auto;
+    }
+
+        .imagem-s13 > img{
+            width: 100%;
+            min-width: 320px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0;
+
+            position: relative !important;
+            right: 0 !important;
+        }
+
+    /* ========= Seção 14 Smartphones ========= */
+
+    .section-14{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-14 .texto-s14{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-right: 15px;
+    }
+
+        .texto-s14 > h2{
+            text-align: center;
+        }
+
+        .texto-s14 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-14 .imagem-s14{
+        height: auto;
+    }
+
+        .imagem-s14 > img{
+            width: 70%;
+            min-width: 220px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0;
+
+            position: relative !important;
+            left: unset !important;
+        }
+
+    /* ========= Seção 15 Smartphones ========= */
+
+    .section-15{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-15 .texto-s15{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: auto;
+
+        margin: 60px 0;
+        padding-left: 15px;
+    }
+
+        .texto-s15 > h2{
+            text-align: center;
+        }
+
+        .texto-s15 > p{
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+    .section-15 .imagem-s15{
+        height: auto;
+    }
+
+        .imagem-s15 > img{
+            width: 100%;
+            min-width: 320px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0;
+
+            position: relative !important;
+            left: unset !important;
+        }
+
+    /* ========= Seção 16 Smartphones ========= */
+
+    .section-16{
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .section-16 .texto-s16{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        height: 100%;
+
+        margin: 60px 0;
+        padding-right: 15px;
+    }
+
+        .texto-s16 > h2{
+            text-align: center;
+        }
+
+        .texto-s16 > p{
+            text-align: center;
+        }
+
+    .section-16 .form-s16{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        height: 100%;
+        
+        margin: 60px 0;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+        .form-s16 > .form-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 100%;
+            
+            border-radius: 12px;
+        }
+
+            .form-title > h3{
+                font-size: 1.4rem;
+            }
 }
 
 /* Tablets */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1023px) {
+    h1, h2{
+        font-size: 2rem !important;
+    }
+
+    p{
+        font-size: 1rem !important;
+    }
+
+    section{
+        height: auto !important;
+        max-height: unset !important;
+        min-height: unset !important;
+    }
+
+    /* ========= Seção 4 Tablets ========= */
+
+    .section-4 .texto-s4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+        height: auto !important;
+
+        margin: 120px 0;
+        padding-left: 60px;
+    }
+
+        .texto-s4 > h2{
+            text-align: left;
+        }
+
+        .texto-s4 > p{
+            text-align: left;
+
+            margin-top: 20px;
+        }
+
+    .section-4 .imagem-s4{
+        height: auto !important;
+    }
+
+        .imagem-s4 > img{
+            width: 90%;
+            min-width: 320px;
+            max-width: 600px;
+            height: auto;
+
+            margin: 60px 0;
+        }
+
+    /* ========= Seção 5 Tablets ========= */
+
+    .section-5 .texto-s5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+        height: auto;
+
+        margin: 120px 0;
+        padding-left: 15px;
+    }
+
+    /* ========= Seção 6 Tablets ========= */
+
+    .section-6 .texto-s6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+        height: auto;
+
+        margin: 120px 0;
+        padding-left: 15px;
+    }
+
+    /* ========= Seção 7 Tablets ========= */
+
+    .section-7 .texto-s7{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+        height: auto;
+
+        margin: 120px 0;
+        padding-left: 15px;
+    }
+
+    /* ========= Seção 8 Tablets ========= */
+
+    .section-8 .texto-s8{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+        height: auto;
+
+        margin: 120px 0;
+        padding-left: 15px;
+    }
+
+    /* ========= Seção 9 Tablets ========= */
+
+    .section-9 .texto-s9{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+        height: auto;
+
+        margin: 120px 0;
+        padding-left: 15px;
+    }
 }
 
 /* Telas Pequenas */
