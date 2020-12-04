@@ -992,6 +992,245 @@ section{
         height: auto;
     }
 
+/* ====== Sessão Nossos Modelos ======== */
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .conteudo-modelos .rowe,
+  .conteudo-modelos .rowe > .column {
+    padding: 8px;
+  }
+  
+  .rowe{
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: wrap;
+      align-items: top;
+      justify-content: center;
+      height: auto;
+      min-height: 768px;
+  }
+
+  /* Create three equal columns that floats next to each other */
+  .column {
+    margin: 0 !important;
+    width: 30%;
+    min-width: 300px;
+    display: none; /* Hide columns by default */
+  }
+  
+  /* Clear floats after rowes */
+  .conteudo-modelos .rowe:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(216, 216, 216);
+    width: 80%;
+    min-width: 280px;
+    border-radius: 12px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .4s ease-out;
+  }
+
+  .content:hover{
+        color: white;
+        background-color: var(--primaria-escura);
+        box-shadow: rgba(0, 0, 0, 0.45) 0 0 30px 0;
+  }
+
+    .content > h4{
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin: 15px 0;
+    }
+
+  .img-modelos{
+      width: 100%;
+      height: 180px;
+      background-image: url(../images/banner-qatendemos-gastronomia-tab.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 12px;
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    margin: 0 !important;
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .btn:hover {
+    background-color: var(--primaria-claro);
+  }
+  
+  /* Add a dark background color to the active button */
+  .btn.active {
+    background-color: var(--primaria-escura);
+     color: white;
+  }
+
+.section-modelos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: auto;
+    max-height: unset !important;
+    padding: 40px 0 !important;
+    position: relative !important;
+    overflow: hidden;
+}
+
+#filterButtons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#filterButtons button{
+    margin: 10px 15px;
+}
+
+.show {
+    display: block;
+}
+
+.conteudo-modelos{
+    padding: 0 !important;
+}
+
+    .conteudo-modelos h2{
+        color: black;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .modelos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 0;
+    }
+
+        .card-modelo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 360px;
+            height: 240px;
+            border-radius: 12px;
+            box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 35px 0;
+            margin: 20px;
+            cursor: pointer;
+            position: relative;
+        }
+        .card-modelo#card-hospedagem{
+            background: url(../images/banner-qatendemos-hotelaria-tab.png) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+        .card-modelo#card-gastronomia{
+            background: url(../images/banner-qatendemos-gastronomia-tab.png) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+        .card-modelo#card-atrativos{
+            background: url(../images/banner-qatendemos-atrativos-tab.png) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+        .card-modelo#card-eventos{
+            background: url(../images/banner-qatendemos-eventos-tab.png) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+        .card-modelo#card-agencias{
+            background: url(../images/banner-qatendemos-agencia-tab.png) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+        .card-modelo#card-governamental{
+            background: url(../images/banner-qatendemos-governamental-tab.png) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+        .card-modelo#card-transportadoras{
+            background: url(../images/banner-qatendemos-transportadoras-tab.png) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+        .card-modelo#card-associacoes{
+            background: url(../images/banner-qatendemos-associacoes-tab.png) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+
+        .card-modelo a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(0, 128, 0, 0);
+            text-decoration: none;
+            z-index: 1000 !important;
+            width: 100%;
+            height: 240px;
+            transition: .3s ease-out;
+        }
+
+        .card-modelo a:hover{
+            background-color: rgba(19, 145, 19, 0.747);
+            width: 100%;
+            height: 240px;
+            border-radius: 12px;
+        }
+
+        .card-modelo a > h3{
+            font-weight: 500;
+            transition: .3s ease-out;
+        }
+
+        .card-modelo a:hover .h3-card-modelo{
+            color: white !important;
+        }
+
 /* ========= Seção 16 ========= */
 
 .section-16{
@@ -1242,6 +1481,16 @@ section{
         padding: 5px 20px;
 
         cursor: pointer;
+    }
+
+    .rowe{
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        min-height: 768px;
     }
 
     /* ========= Seção 1 Smartphones ========= */
