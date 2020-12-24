@@ -1,0 +1,357 @@
+/* Reservas fixas no topo */
+
+@media (max-width: 992px) {
+    .book-now-area {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+    .book-now-form {
+        display: flex !important;
+        flex-direction: row !important;
+        width: auto !important;
+        border-radius: 12px !important;
+        position: fixed !important;
+        z-index: 1 !important;
+        top: 25% !important;
+        left: 0 !important;
+        transition: .3s !important;
+    }
+    .book-now-form:hover {
+        background-color: rgba(63, 63, 63, 0.2) !important;
+    }
+    .__top-hide-btn {
+        align-self: center;
+        color: #FFF;
+        font-size: 1.6rem;
+        background: #363636;
+        height: 120px;
+        border: none;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding: 0 6px !important;
+        cursor: pointer;
+        outline: none !important;
+        transition: .4s ease;
+    }
+    .__top-hide-btn:hover {
+        background: #2e2e2e;
+    }
+    /*  Chevron Rotation */
+    .default_bartext {
+        display: none;
+    }
+    .top__chevron-btn {
+        display: inline-block !important;
+        transition: .4s ease;
+    }
+    .rotateToLeft {
+        transform: rotate(180deg);
+        animation-duration: .3s;
+        animation-name: rotateToLeft_btn;
+    }
+    @keyframes rotateToLeft_btn {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(180deg);
+        }
+    }
+    .rotateToRight {
+        transform: rotate(0);
+        animation-duration: .3s;
+        animation-name: rotateToRight_btn;
+    }
+    @keyframes rotateToRight_btn {
+        from {
+            transform: rotate(180deg);
+        }
+        to {
+            transform: rotate(0deg);
+        }
+    }
+    .__top-hide {
+        left: -310px !important;
+    }
+    .__top-animate-hide {
+        animation-duration: .3s !important;
+        animation-name: leftHide;
+    }
+    .__top-animate-show {
+        animation-duration: .3s !important;
+        animation-name: leftShow;
+    }
+    @keyframes leftHide {
+        from {
+            left: 0 !important;
+        }
+        to {
+            left: -310px !important;
+        }
+    }
+    @keyframes leftShow {
+        from {
+            left: -310px !important;
+        }
+        to {
+            left: 0 !important;
+        }
+    }
+    .book-now-form form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    .book-now-form form .form-group,
+    .book-now-form form button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        height: 60px;
+        background-color: #363636;
+        border-left: 2px solid #444444 !important;
+        border-top: 2px solid #444444 !important;
+        border-bottom: 2px solid #444444 !important;
+        margin-bottom: 0;
+        padding: 15px 30px;
+    }
+    .book-now-form form .form-group h2 {
+        color: #FFF;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    .book-now-form form .form-group label {
+        color: #ffffff;
+        display: block;
+        font-size: 14px;
+        width: 50%;
+        margin-bottom: 0;
+    }
+    .book-now-form form button {
+        border: none !important;
+        font-size: 16px;
+        background-color: #f03a3a;
+        text-transform: uppercase;
+        color: #ffffff;
+        cursor: pointer;
+        -webkit-transition-duration: 300ms;
+        transition-duration: 300ms;
+        padding: 15px 0;
+    }
+    .book-now-form form button:hover,
+    .book-now-form form button:focus {
+        outline: none;
+        background-color: #363636;
+    }
+    .book-now-form form .form-control:focus {
+        box-shadow: none;
+    }
+}
+
+
+/* Reservas fixas no rodapé */
+
+@media (max-width: 992px) {
+    .bottombook-now-area {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+    .bottombook-now-form {
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        width: auto !important;
+        border-radius: 12px !important;
+        position: fixed !important;
+        z-index: 1 !important;
+        top: 25% !important;
+        left: 0 !important;
+        bottom: unset !important;
+        transition: .3s !important;
+    }
+    .bottombook-now-form:hover {
+        background-color: rgba(63, 63, 63, 0.2) !important;
+    }
+    .__bottom-hide-btn {
+        align-self: center;
+        color: #FFF;
+        font-size: 1.6rem;
+        background: #363636;
+        height: 120px;
+        border: none;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        padding: 0 6px !important;
+        cursor: pointer;
+        outline: none !important;
+        transition: .4s ease;
+    }
+    .__bottom-hide-btn:hover {
+        background: #2e2e2e;
+    }
+    /*  Chevron Rotation */
+    .default_bartext {
+        display: none;
+    }
+    .bottom__chevron-btn {
+        display: inline-block !important;
+        transition: .4s ease;
+    }
+    .rotateToLeft {
+        transform: rotate(180deg);
+        animation-duration: .3s;
+        animation-name: rotateToLeft_btn;
+    }
+    @keyframes rotateToLeft_btn {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(180deg);
+        }
+    }
+    .rotateToRight {
+        transform: rotate(0);
+        animation-duration: .3s;
+        animation-name: rotateToRight_btn;
+    }
+    @keyframes rotateToRight_btn {
+        from {
+            transform: rotate(180deg);
+        }
+        to {
+            transform: rotate(0deg);
+        }
+    }
+    .__bottom-hide {
+        left: -310px !important;
+    }
+    .__bottom-animate-hide {
+        animation-duration: .3s !important;
+        animation-name: leftHide;
+    }
+    .__bottom-animate-show {
+        animation-duration: .3s !important;
+        animation-name: leftShow;
+    }
+    @keyframes leftHide {
+        from {
+            left: 0 !important;
+        }
+        to {
+            left: -310px !important;
+        }
+    }
+    @keyframes leftShow {
+        from {
+            left: -310px !important;
+        }
+        to {
+            left: 0 !important;
+        }
+    }
+    .bottombook-now-form form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column !important;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+        -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
+        width: 100%;
+    }
+    .bottombook-now-form form .form-group,
+    .bottombook-now-form form button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        height: 60px !important;
+        background-color: #363636;
+        border-left: 2px solid #444444 !important;
+        border-top: 2px solid #444444 !important;
+        border-bottom: 2px solid #444444 !important;
+        margin-bottom: 0;
+        padding: 15px 30px !important;
+    }
+    .bottombook-now-form form .form-group h2 {
+        color: #FFF;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    .bottombook-now-form form .form-group label {
+        color: #ffffff;
+        display: block;
+        font-size: 14px;
+        width: 50%;
+        margin-bottom: 0;
+    }
+    .bottombook-now-form form button {
+        border: none !important;
+        font-size: 16px;
+        background-color: #f03a3a;
+        text-transform: uppercase;
+        color: #ffffff;
+        cursor: pointer;
+        -webkit-transition-duration: 300ms;
+        transition-duration: 300ms;
+        padding: 15px 0;
+    }
+    .bottombook-now-form form button:hover,
+    .bottombook-now-form form button:focus {
+        outline: none;
+        background-color: #363636;
+    }
+    .bottombook-now-form form .form-control:focus {
+        box-shadow: none;
+    }
+}

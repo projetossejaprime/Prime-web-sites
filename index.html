@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
     <title>Prime Web | Sites</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <link href="owl/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="owl/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -17,8 +22,48 @@
     <script src="https://use.fontawesome.com/91b1a9b1a1.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body> 
-    
+
+<body>
+
+    <!-- Header -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="https://sejaprime.com.br/primeweb">
+            <img class="img-responsive prime-logo" src="images/logo.png" alt="logo seja prime">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav justify-content-left ul-navbar-header">
+                <li class="nav-item li-navbar">
+                    <a class="nav-link" href="#quem-somos">Sobre <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item li-navbar">
+                    <a class="nav-link" href="#o-que-fazemos">O que fazemos</a>
+                </li>
+                <li class="nav-item li-navbar">
+                    <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                </li>
+                <li class="nav-item li-navbar">
+                    <a class="nav-link" href="#vantagens">Vantagens</a>
+                </li>
+                <li class="nav-item li-navbar">
+                    <a class="nav-link" href="blog">Blog</a>
+                </li>
+                <li class="nav-item li-navbar icon">
+                    <a class="nav-link" href="#"><i class="fa fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item li-navbar nav-cliente">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target=".modal-formulario">Solicite Atendimento</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Seção 1: Título da página -->
 
     <section class="container-fluid section-1">
@@ -46,7 +91,7 @@
                     <h3>Sua empresa ainda não está na web?</h3>
                     <p>Você deixa de vender produtos, ingressos ou reservas por falta de visibilidade?</p>
                 </div>
-            
+
                 <div class="col-xs-12 card-s2">
                     <div class="icone-card-s2">
                         <img src="images/icons/icon-2-s2.png" alt="">
@@ -226,7 +271,7 @@
     </section>
 
     <!-- Seção 12: "Entenda as novas leis (LGPD) e não deixe sua empresa ser penalizada!" -->
-    
+
     <section class="container-fluid section-12">
         <div class="row d-flex flex-row-reverse">
             <div class="col-sm-6 col-lg-6 texto-s12">
@@ -291,102 +336,246 @@
         <div class="row">
             <div class="col-xs-12 col-lg-12 col-sm-12 col-md-12 conteudo-modelos">
                 <h2>Confira nossos modelos:</h2>
-                <div id="filterButtons">
-                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-                    <button class="btn" onclick="filterSelection('nature')"> Nature</button>
-                    <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-                    <button class="btn" onclick="filterSelection('people')"> People</button>
+                <div id="filterButtons" class="screenDisplay">
+                    <button class="filter_btn active" onclick="pegaModelo('todos')"> Mostrar todos</button>
+                    <button class="filter_btn" onclick="pegaModelo('hospedagem')">Hospedagem</button>
+                    <button class="filter_btn" onclick="pegaModelo('gastronomia')">Gastronomia</button>
+                    <button class="filter_btn" onclick="pegaModelo('atrativos')">Atrativos</button>
+                    <!-- <button class="filter_btn" onclick="pegaModelo('passeios')">Passeios</button> -->
+                    <button class="filter_btn" onclick="pegaModelo('eventos')">Eventos</button>
+                    <button class="filter_btn" onclick="pegaModelo('agencias')">Agências de turismo</button>
+                    <button class="filter_btn" onclick="pegaModelo('transportadoras')">Transportadoras Turísticas</button>
+                    <button class="filter_btn" onclick="pegaModelo('governamental')">Governamental</button>
+                    <button class="filter_btn" onclick="pegaModelo('associacoes')">Associações e Núcleos</button>
+                    <select class="filter_btn-mobile" onchange="pegaModelo(value)"> 
+                        <option value="todos">Mostrar todos</option>
+                        <option value="hospedagem">Hospedagem</option>
+                        <option value="gastronomia">Gastronomia</option>
+                        <option value="atrativos">Atrativos</option>
+                        <!-- <option value="passeios">Passeios</option> -->
+                        <option value="eventos">Eventos</option>
+                        <option value="agencias">Agências de turismo</option>
+                        <option value="transportadoras">Transportadoras turísticas</option>
+                        <option value="governamental">Governamental</option>
+                        <option value="associacoes">Associações e núcleos</option>
+                    </select>
                 </div>
 
-                <!-- Portfolio Gallery Grid -->
-                <div class="rowe">
+                <div class="filter-models">
+                    <div class="carrega_modelos hospedagem">
+                        <h3>Hospedagem</h3>
+                        <div class="owl-carousel">
+                            <div class="card-container">
+                                <a class="card-content" href="sites/hotel1/1/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/hotel1.png">
+                                    </div>
+                                    <h4>Hotel 1</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
 
-                    <div class="column nature">
-                        <div class="content">
-                            <div class="img-modelos">
+                            <div class="card-container">
+                                <a class="card-content" href="sites/hotel2/11/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/hotel2.png">
+                                    </div>
+                                    <h4>Hotel 2</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
 
+                            <div class="card-container">
+                                <a class="card-content" href="sites/hotel3/3/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/hotel3.png">
+                                    </div>
+                                    <h4>Hotel 3</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
                             </div>
-                            <h4>Mountains</h4>
+
+                            <div class="card-container">
+                                <a class="card-content" href="sites/hotel4/4/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/hotel4.png">
+                                    </div>
+                                    <h4>Hotel 4</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
+
+                            <div class="card-container">
+                                <a class="card-content" href="sites/hotel5/10/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/hotel5.png">
+                                    </div>
+                                    <h4>Hotel 5</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
+
+                            <div class="card-container">
+                                <a class="card-content" href="sites/hotel6/2/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/hotel6.png">
+                                    </div>
+                                    <h4>Hotel 6</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
+
+                            <div class="card-container">
+                                <a class="card-content" href="sites/hotel7/2/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/hotel7.png">
+                                    </div>
+                                    <h4>Hotel 7</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
+
+                            <div class="card-container">
+                                <a class="card-content" href="sites/hotel8/7/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/hotel8.png">
+                                    </div>
+                                    <h4>Hotel 8</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
+
+                            <div class="card-container">
+                                <a class="card-content" href="sites/hotel9/9/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/hotel9.png">
+                                    </div>
+                                    <h4>Hotel 9</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
+
+                            <div class="card-container">
+                                <a class="card-content" href="sites/hotel10/9/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/hotel10.png">
+                                    </div>
+                                    <h4>Hotel 10</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="column nature">
-                        <div class="content">
-                            <div class="img-modelos">
-                                
+                    <div class="carrega_modelos atrativos">
+                        <h3>Atrativos</h3>
+                        <div class="owl-carousel">
+                            <div class="card-container">
+                                <a class="card-content" href="sites/trekking1/1/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/trilha1.png">
+                                    </div>
+                                    <h4>Trilha 1</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
                             </div>
-                            <h4>Lights</h4>
-                        </div>
-                    </div>
 
-                    <div class="column nature">
-                        <div class="content">
-                            <div class="img-modelos">
-                                
+                            <div class="card-container">
+                                <a class="card-content" href="sites/trekking2/1/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/trilha2.png">
+                                    </div>
+                                    <h4>Trilha 2</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
                             </div>
-                            <h4>Forest</h4>
-                        </div>
-                    </div>
-                
-                    <div class="column cars">
-                        <div class="content">
-                            <div class="img-modelos">
-                                
-                            </div>
-                            <h4>Retro</h4>
-                        </div>
-                    </div>
 
-                    <div class="column cars">
-                        <div class="content">
-                            <div class="img-modelos">
-                                
+                            <div class="card-container">
+                                <a class="card-content" href="sites/trekking3/1/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/trilha3.png">
+                                    </div>
+                                    <h4>Trilha 3</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
                             </div>
-                            <h4>Fast</h4>
-                        </div>
-                    </div>
 
-                    <div class="column cars">
-                        <div class="content">
-                            <div class="img-modelos">
-                                
+                            <div class="card-container">
+                                <a class="card-content" href="sites/parque1/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/parque1.png">
+                                    </div>
+                                    <h4>Parque 1</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
                             </div>
-                            <h4>Classic</h4>
-                        </div>
-                    </div>
-                
-                    <div class="column people">
-                        <div class="content">
-                            <div class="img-modelos">
-                                
-                            </div>
-                            <h4>Girl</h4>
-                        </div>
-                    </div>
 
-                    <div class="column people">
-                        <div class="content">
-                            <div class="img-modelos">
-                                
+                            <div class="card-container">
+                                <a class="card-content" href="sites/parque2/1/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/parque2.png">
+                                    </div>
+                                    <h4>Parque 2</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
                             </div>
-                            <h4>Man</h4>
-                        </div>
-                    </div>
 
-                    <div class="column people">
-                        <div class="content">
-                            <div class="img-modelos">
-                                
+                            <div class="card-container">
+                                <a class="card-content" href="sites/parque3/1/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/parque3.png">
+                                    </div>
+                                    <h4>Parque 3</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
                             </div>
-                            <h4>Woman</h4>
+
+                            <div class="card-container">
+                                <a class="card-content" href="sites/parque4/1/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/parque4.png">
+                                    </div>
+                                    <h4>Parque 4</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
+
+                            <div class="card-container">
+                                <a class="card-content" href="sites/barco1/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/barco1.png">
+                                    </div>
+                                    <h4>Barco 1</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
+
+                            <div class="card-container">
+                                <a class="card-content" href="sites/barco2/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/barco2.png">
+                                    </div>
+                                    <h4>Barco 2</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
+
+                            <div class="card-container">
+                                <a class="card-content" href="sites/barco3/index.html" target="_blank">
+                                    <div class="img-modelos">
+                                        <img src="images/barco3.png">
+                                    </div>
+                                    <h4>Barco 3</h4>
+                                </a>
+                                <a class="btn-contratar" href="#">Contratar</a>
+                            </div>
                         </div>
                     </div>
-                <!-- END GRID -->
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Seção 16: "Formulario" -->
 
     <section class="container-fluid section-16">
@@ -396,7 +585,7 @@
                 <p>Estamos disponibilizando <span>10 consultorias gratuitas</span> por <span>tempo limitado.</span> Se você pretende descobrir estratégias de <b>conversão, engajamento e conteúdos atrativos</b>, deve agarrar essa chance!</p>
             </div>
             <div class="col-sm-6 col-lg-6 form-s16">
-                <div class="form-box">
+                <div class="form-container">
                     <div class="form-title">
                         <h3>Consultoria gratuita</h3>
                     </div>
@@ -413,54 +602,192 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="page-footer font-small indigo rodape">
+        <div class="container text-center text-md-left p-0">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mx-auto rodape-info">
+                    <h5 class="font-weight-normal text-uppercase mt-3 mb-4">Institucional</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#!">O que fazemos</a>
+                        </li>
+                        <li>
+                            <a href="#!">Depoimentos</a>
+                        </li>
+                        <li>
+                            <a href="#!">Vantagens</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contato</a>
+                        </li>
+                        <li>
+                            <a href="#!">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mx-auto rodape-info">
+                    <h5 class="font-weight-normal text-uppercase mt-3 mb-4">Comercial</h5>
+                    <ul class="list-unstyled">
+                        <li>(48) 99860-3471</li>
+                        <li>comercial@sejaprime.com.br</li>
+                        <li class="li-margin"><span class="footer-icons"><i class="fa fa-skype"></i></span>primesistemas</li>
+                        <li><span class="footer-icons"><i class="fa fa-whatsapp"></i></span>(48) 9 9910-9405</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mx-auto rodape-info">
+                    <h5 class="font-weight-normal text-uppercase mt-3 mb-4">Suporte</h5>
+                    <ul class="list-unstyled">
+                        <li>suporte@sejaprime.com.br</li>
+                        <li class="li-margin"><span class="footer-icons"><i class="fa fa-skype"></i></span>prime.suporte</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-12 col-lg-3 mx-auto rodape-info logo-prime">
+                    <ul class="list-unstyled">
+                        <li>
+                            <img src="images/logo.png" alt="logo prime bank" class="img-responsive prime-logo">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 rodape-info logo-prime-tablet">
+                    <ul class="list-unstyled">
+                        <li>
+                            <img src="images/logo.png" alt="logo prime bank" class="img-responsive prime-logo">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <h2>&copy Desenvolvido com <span><i class="fa fa-heart" aria-hidden="true"></i></span> pelo grupo SEJAPRIME</h2>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+
+    <div class="modal fade modal-formulario" tabindex="-1" role="dialog" aria-labelledby="modalFormulario" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="col-lg-12 modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="row d-flex flex-row-resp">
+                    <div class="col-md-6 col-lg-6 pl-xs-2 pr-xs-2 text-box">
+                        <h2 class="mb-4">Monte seu site conosco!</h2>
+                        <p>
+                            Informe os dados no formulário ao lado para que um de nossos consultores entre em contato com você!
+                        </p>
+                        <a class="__btn-modal-wpp" href="https://api.whatsapp.com/send?phone=5548996761601&text=Quero+garantir+as+minhas+vendas" target="_blank">Whatsapp</a>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 form-box">
+                        <form class="full-form" action="#" method="post" autocomplete="off">
+                            <input type="hidden" name="origin" value="Visite Laguna" />
+                            <input type="hidden" name="formType" value="full-data" />
+                            <label for="input_company">Empresa:</label>
+                            <input id="input_company" type="text" name="company_name" placeholder="Digite o nome da sua empresa" data-valid="false" data-label="Empresa" required />
+
+                            <label for="input_name">Nome:</label>
+                            <input id="input_name" data-valid="false" data-label="Nome" type="text" name="name" placeholder="Seu nome" />
+
+                            <label for="input_email">Email:</label>
+                            <input id="input_email" type="email" name="email" placeholder="Seu e-mail" data-valid="false" data-label="E-mail" required />
+
+                            <label for="input_phone">Telefone/Whatsapp:</label>
+                            <input id="input_phone" type="tel" name="telephone" placeholder="Telefone ou WhatsApp para contato" data-valid="false" data-label="Telefone/WhatsApp" required />
+
+                            <button onclick="gtag_report_conversion()" type="button" name="submit">Enviar</button>
+                        </form>
+
+                        <div class="form-labels">
+                            <div class="label">
+                                <img src="images/form-label-1.png" alt="Selo SSL de proteção">
+                            </div>
+                            <div class="label">
+                                <img src="images/form-label-2.png" alt="Selo HOST de proteção">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="owl/owl-carousel.js"></script>
+
     <script>
-        filterSelection("all") // Execute the function and show all columns
-        function filterSelection(c) {
-        var x, i;
-        x = document.getElementsByClassName("column");
-        if (c == "all") c = "";
-        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-        for (i = 0; i < x.length; i++) {
-            w3RemoveClass(x[i], "show");
-            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-        }
-        }
+        // ==================== Filtro modelos ====================
 
-        // Show filtered elements
-        function w3AddClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[i]) == -1) {
-            element.className += " " + arr2[i];
-            }
-        }
-        }
+        function pegaModelo(modelo) {
+            var $container = $('.filter-models'),
+                $scrollTo = $('.carrega_modelos');
 
-        // Hide elements that are not selected
-        function w3RemoveClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-            while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
+            $(".carrega_modelos").css({
+                'display': 'none'
+            });
+
+            if (modelo !== "todos") {
+                $("." + modelo).css({
+                    'display': 'block'
+                });
+                $("html,body").animate({
+                    scrollTop: $("." + modelo).offset().top - 70
+                }, 1000);
+            } else {
+                $(".carrega_modelos").css({
+                    'display': 'block'
+                });
+                $("html,body").animate({
+                    scrollTop: $(".carrega_modelos").offset().top - 70
+                }, 1000);
             }
-        }
-        element.className = arr1.join(" ");
+
         }
 
         // Add active class to the current button (highlight it)
         var btnContainer = document.getElementById("filterButtons");
-        var btns = btnContainer.getElementsByClassName("btn");
+        var btns = btnContainer.getElementsByClassName("filter_btn");
+
         for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function(){
+            btns[i].addEventListener("click", function() {
                 var current = document.getElementsByClassName("active");
                 current[0].className = current[0].className.replace(" active", "");
                 this.className += " active";
             });
         }
+
+        // ==================== Carrosséis ====================
+        $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                nav: true,
+                dots: true,
+                navText: ["<span class='mdi mdi-arrow-left'>", "<span class='mdi mdi-arrow-right'>"],
+                center: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+        });
     </script>
 </body>
+
 </html>

@@ -1,0 +1,789 @@
+body {
+    margin: 0;
+    outline: none !important;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(233, 233, 233);
+    height: 100vh;
+    margin-bottom: 10px;
+}
+
+section h2 {
+    color: #000;
+    font-size: 3rem;
+    text-align: center;
+}
+
+section a {
+    font-size: 1.6rem !important;
+    font-weight: 500 !important;
+    width: 180px;
+    padding: 15px 0 !important;
+    margin-top: 25px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+
+/* ======================Reservas Topo====================== */
+
+.book-now-area {
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.book-now-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 56px;
+    left: 0;
+}
+
+.__top-hide-btn {
+    align-self: center;
+    color: #FFF;
+    font-size: 1rem;
+    background: #363636;
+    border: none;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 10px 45px;
+    cursor: pointer;
+    outline: none !important;
+    transition: .4s ease;
+}
+
+.__top-hide-btn:hover {
+    background: #585656;
+}
+
+.top__chevron-btn {
+    display: none;
+}
+
+.__top-hide {
+    top: 0;
+}
+
+.__top-animate-hide {
+    animation-duration: .3s;
+    animation-name: topHide;
+}
+
+.__top-animate-show {
+    animation-duration: .3s;
+    animation-name: topShow;
+}
+
+@keyframes topHide {
+    from {
+        top: 56px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes topShow {
+    from {
+        top: 0;
+    }
+    to {
+        top: 56px;
+    }
+}
+
+.book-now-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.book-now-form form .form-group,
+.book-now-form form button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+    width: 20%;
+    height: 60px;
+    background-color: #363636;
+    border-left: 2px solid #444444;
+    border-top: 2px solid #444444;
+    border-bottom: 2px solid #444444;
+    margin-bottom: 0;
+    padding: 0 30px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .book-now-form form .form-group,
+    .book-now-form form button {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .book-now-form form .form-group,
+    .book-now-form form button {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        height: 100px;
+        border-bottom: 0 solid transparent;
+        border-right: 2px solid #444444;
+    }
+}
+
+.book-now-form form .form-group label {
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.book-now-form form button {
+    border-right: 2px solid #cb8670;
+    font-size: 16px;
+    background-color: #cb8670;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    padding: 0;
+}
+
+.book-now-form form button:hover,
+.book-now-form form button:focus {
+    outline: none;
+    background-color: #363636;
+}
+
+.book-now-form form .form-control:focus {
+    box-shadow: none;
+}
+
+
+/* ======================Reservas Laterais (Esquerda)====================== */
+
+.leftside-book-now-area {
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.leftside-book-now-form {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    border-radius: 12px;
+    position: fixed;
+    z-index: 1;
+    top: 25%;
+    left: 0;
+    transition: .6s;
+}
+
+.leftside-book-now-form:hover {
+    background-color: rgba(63, 63, 63, 0.2);
+}
+
+.__left-hide-btn {
+    align-self: center;
+    color: #FFF;
+    font-size: 1.6rem;
+    background: #363636;
+    height: 120px;
+    border: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+    outline: none !important;
+    transition: .4s ease;
+}
+
+.__left-hide-btn:hover {
+    background: #2e2e2e;
+}
+
+
+/*  Chevron Rotation */
+
+.__chevron-btn {
+    display: inline-block;
+    transition: .4s ease;
+}
+
+.rotateToLeft {
+    transform: rotate(180deg);
+    animation-duration: .3s;
+    animation-name: rotateToLeft_btn;
+}
+
+@keyframes rotateToLeft_btn {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+.rotateToRight {
+    transform: rotate(0);
+    animation-duration: .3s;
+    animation-name: rotateToRight_btn;
+}
+
+@keyframes rotateToRight_btn {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.__left-hide {
+    left: -310px;
+}
+
+.__left-animate-hide {
+    animation-duration: .3s;
+    animation-name: leftHide;
+}
+
+.__left-animate-show {
+    animation-duration: .3s;
+    animation-name: leftShow;
+}
+
+@keyframes leftHide {
+    from {
+        left: 0;
+    }
+    to {
+        left: -310px;
+    }
+}
+
+@keyframes leftShow {
+    from {
+        left: -310px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.leftside-book-now-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.leftside-book-now-form form .form-group,
+.leftside-book-now-form form button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 60px;
+    background-color: #363636;
+    border-left: 2px solid #444444;
+    border-top: 2px solid #444444;
+    border-bottom: 2px solid #444444;
+    margin-bottom: 0;
+    padding: 15px 30px;
+}
+
+.leftside-book-now-form form .form-group h2 {
+    color: #FFF;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 767px) {
+    .leftside-book-now-form form .form-group,
+    .leftside-book-now-form form button {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        height: 100px;
+        border-bottom: 0 solid transparent;
+        border-right: 2px solid #cb8670;
+    }
+}
+
+.leftside-book-now-form form .form-group label {
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.leftside-book-now-form form button {
+    border: none !important;
+    font-size: 16px;
+    background-color: #f03a3a;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    padding: 15px 0;
+}
+
+.leftside-book-now-form form button:hover,
+.leftside-book-now-form form button:focus {
+    outline: none;
+    background-color: #363636;
+}
+
+.leftside-book-now-form form .form-control:focus {
+    box-shadow: none;
+}
+
+
+/* ======================Reservas Laterais (Direita)====================== */
+
+.rightside-book-now-area {
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.rightside-book-now-form {
+    display: flex;
+    flex-direction: row-reverse;
+    width: auto;
+    border-radius: 12px;
+    position: fixed;
+    z-index: 1;
+    top: 25%;
+    right: 0;
+    transition: .6s;
+}
+
+.rightside-book-now-form:hover {
+    background-color: rgba(63, 63, 63, 0.2);
+}
+
+.__right-hide-btn {
+    align-self: center;
+    color: #FFF;
+    font-size: 1.6rem;
+    background: #363636;
+    height: 120px;
+    border: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    cursor: pointer;
+    outline: none !important;
+    transition: .4s ease;
+}
+
+.__right-hide-btn:hover {
+    background: #2e2e2e;
+}
+
+
+/*  Chevron Rotation */
+
+.__chevron-btn {
+    display: inline-block;
+    transition: .4s ease;
+}
+
+.rotateToLeft {
+    transform: rotate(180deg);
+    animation-duration: .3s;
+    animation-name: rotateToLeft_btn;
+}
+
+@keyframes rotateToLeft_btn {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+.rotateToRight {
+    transform: rotate(0);
+    animation-duration: .3s;
+    animation-name: rotateToRight_btn;
+}
+
+@keyframes rotateToRight_btn {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.__right-hide {
+    right: -310px;
+}
+
+.__right-animate-hide {
+    animation-duration: .3s;
+    animation-name: rightHide;
+}
+
+.__right-animate-show {
+    animation-duration: .3s;
+    animation-name: rightShow;
+}
+
+@keyframes rightHide {
+    from {
+        right: 0;
+    }
+    to {
+        right: -310px;
+    }
+}
+
+@keyframes rightShow {
+    from {
+        right: -310px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.rightside-book-now-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.rightside-book-now-form form .form-group,
+.rightside-book-now-form form button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 60px;
+    background-color: #363636;
+    border-left: 2px solid #444444;
+    border-top: 2px solid #444444;
+    border-bottom: 2px solid #444444;
+    margin-bottom: 0;
+    padding: 15px 30px;
+}
+
+.rightside-book-now-form form .form-group h2 {
+    color: #FFF;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 767px) {
+    .rightside-book-now-form form .form-group,
+    .rightside-book-now-form form button {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        height: 100px;
+        border-bottom: 0 solid transparent;
+        border-right: 2px solid #cb8670;
+    }
+}
+
+.rightside-book-now-form form .form-group label {
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.rightside-book-now-form form button {
+    border: none !important;
+    font-size: 16px;
+    background-color: #f03a3a;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    padding: 15px 0;
+}
+
+.rightside-book-now-form form button:hover,
+.rightside-book-now-form form button:focus {
+    outline: none;
+    background-color: #363636;
+}
+
+.rightside-book-now-form form .form-control:focus {
+    box-shadow: none;
+}
+
+
+/* ======================Reservas Rodape====================== */
+
+.bottombook-now-area {
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.bottombook-now-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+}
+
+.__bottom-hide-btn {
+    align-self: center;
+    color: #FFF;
+    font-size: 1rem;
+    background: #363636;
+    border: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 10px 45px;
+    cursor: pointer;
+    outline: none !important;
+    transition: .4s ease;
+}
+
+.__bottom-hide-btn:hover {
+    background: #585656;
+}
+
+.bottom__chevron-btn {
+    display: none;
+}
+
+.__bottom-hide {
+    bottom: -56px;
+}
+
+.__bottom-animate-hide {
+    animation-duration: .3s;
+    animation-name: bottomHide;
+}
+
+.__bottom-animate-show {
+    animation-duration: .3s;
+    animation-name: bottomShow;
+}
+
+@keyframes bottomHide {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: -56px;
+    }
+}
+
+@keyframes bottomShow {
+    from {
+        bottom: -56px;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
+.bottombook-now-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.bottombook-now-form form .form-group,
+.bottombook-now-form form button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+    width: 20%;
+    height: 60px;
+    background-color: #363636;
+    border-left: 2px solid #444444;
+    border-top: 2px solid #444444;
+    border-bottom: 2px solid #444444;
+    margin-bottom: 0;
+    padding: 0 30px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .bottombook-now-form form .form-group,
+    .bottombook-now-form form button {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .bottombook-now-form form .form-group,
+    .bottombook-now-form form button {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        height: 100px;
+        border-bottom: 0 solid transparent;
+        border-right: 2px solid #444444;
+    }
+}
+
+.bottombook-now-form form .form-group label {
+    color: #cb8670;
+    display: block;
+    font-size: 14px;
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.bottombook-now-form form button {
+    border-right: 2px solid #cb8670;
+    font-size: 16px;
+    background-color: #cb8670;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    padding: 0;
+}
+
+.bottombook-now-form form button:hover,
+.bottombook-now-form form button:focus {
+    outline: none;
+    background-color: #363636;
+}
+
+.bottombook-now-form form .form-control:focus {
+    box-shadow: none;
+}
